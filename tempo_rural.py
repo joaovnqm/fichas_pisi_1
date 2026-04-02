@@ -19,7 +19,7 @@ while True:
 
     os.system("cls")
     print("* * * * * * * * * * * * - Bem-vindo ao: Tempo Rural - * * * * * * * * * * * *")
-    print(f"A hora atual é: {data["current"]["time"][11::]}"
+    print(f"A hora da última previsão é: {data["current"]["time"][11::]}"
         "\nAs informações atuais são:"
         f"\nA temperatura atual é: {data["current"]["temperature_2m"]}Cº"
         f"\nA sensação térmica é de: {data["current"]["apparent_temperature"]}Cº"
@@ -30,16 +30,16 @@ while True:
         )
 
     if float(*precipitation_sum) >= 40.00:
-        print(f"Opa! Tome cuidado, vai chover muito. O previsto ao longo do dia é de: {float(*precipitation_sum)}mm" \
+        print(f"Opa! Tome cuidado, vai chover muito. O previsto ao longo do dia é de: {float(*precipitation_sum)}mm." \
         "\nConfira com a universidade ou com o seu professor se as aulas estão mantidas.")
 
     elif float(*precipitation_sum) >= 20.00:
         print("Se ligue, vai chover um volume considerável ao longo do dia, " 
-            f"\nO previsto ao longo do dia é de: {float(*precipitation_sum)}mm"
-            "\ntome cuidado.")
+            f"\nO previsto ao longo do dia é de: {float(*precipitation_sum)}mm."
+            "\nTome cuidado.")
 
     elif float(*precipitation_sum) > 0.00:
-        print("Vai chover, mas não muito, ufa! Continue atento à previsão. " 
+        print("Pode chover, mas não muito, ufa! Continue atento à previsão. " 
             f"\nO previsto ao longo do dia é de: {float(*precipitation_sum)}mm.")
 
     else:
